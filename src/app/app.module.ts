@@ -11,15 +11,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { QuizComponent } from './quiz/quiz.component';
 import { LeaderboardComponent } from './leaderboard/leaderboard.component';
+import { AdminComponent } from './admin/admin.component';
 @NgModule({
-  declarations: [	
+  declarations: [		
     AppComponent,
     RegisterComponent,
     LoginComponent,
     TopbarComponent,
       QuizComponent,
       DisplayQuestionsComponent,
-      LeaderboardComponent
+      LeaderboardComponent,
+      AdminComponent
    ],
   imports: [
     BrowserModule,

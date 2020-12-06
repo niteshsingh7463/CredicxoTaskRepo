@@ -1,0 +1,18 @@
+<div class="container">
+    <h4>All Users</h4>
+    <div class="row bg-dark text-center">
+        <div class="col-3 text-white border">Name</div>
+        <div class="col-3 text-white border">Email</div>
+        <div class="col-3 text-white border">Marks</div>
+
+        <div class="col-3 text-white border"></div>
+
+    </div>
+
+    <div class="row bg-light text-center" *ngFor="let item of all_Auth_Data">
+        <div class="col-3  border">{{item.name}}</div>
+        <div class="col-3  border">{{item.email}}</div>
+        <div class="col-3  border">{{item.marksScored}}</div>
+        <div class="col-3 border"><button class="btn btn-sm btn-danger" (click)="remove(item.email)">Remove</button></div>
+    </div>
+</div>

@@ -1,3 +1,5 @@
+import { AdminAuthGuard } from './admin-auth.guard';
+import { AdminComponent } from './admin/admin.component';
 import { UserAuthGuard } from './user-auth.guard';
 import { QuizComponent } from './quiz/quiz.component';
 import { RegisterComponent } from './register/register.component';
@@ -16,6 +18,10 @@ const routes: Routes = [
     path:'quiz',
     component:QuizComponent,
     canActivate:[UserAuthGuard]
+  },{
+    path:'admin',
+    component:AdminComponent,
+    canActivate:[AdminAuthGuard]
   },{
     path:'',
     redirectTo:'login',

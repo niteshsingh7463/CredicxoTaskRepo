@@ -22,8 +22,10 @@ export class AuthService {
   login(response) {
     this.currUser = response;
     this.loginStatusObs.next(response);
+if(this.currUser.role=='user'){
+    this.router.navigate(['/quiz']);}
+    else{this.router.navigate(['/admin']);}
 
-    this.router.navigate(['/quiz']);
   }
   logout() {
     this.currUser = null;
