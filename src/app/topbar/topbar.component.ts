@@ -17,7 +17,7 @@ export class TopbarComponent implements OnInit {
       this.currentUser = status;
       this.currentUserRole = this.currentUser.role;
 
-      console.log('Status::>',status);
+      // console.log('Status::>',status);
     })
   }
   logout() {

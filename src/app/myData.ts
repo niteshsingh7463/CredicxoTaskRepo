@@ -1,4 +1,4 @@
-export var allAuthData = [{email:'user@user.com',password:'user1234',role:'user',name:'user',marksScored:null},{email:'admin@admin.com',password:'admin1234',role:'admin',name:'admin'}];
+export var allAuthData = [{email:'user@gmail.com',password:'user1234',role:'user',name:'user',marksScored:null},{email:'lana@gmail.com',password:'lana1234',role:'user',name:'Lana',marksScored:16},{email:'Jack@gmail.com',password:'jack1234',role:'user',name:'Jack',marksScored:16},{email:'Mary@gmail.com',password:'mary1234',role:'user',name:'Mary',marksScored:8},{email:'John@gmail.com',password:'john1234',role:'user',name:'John',marksScored:12},{email:'admin@gmail.com',password:'admin1234',role:'admin',name:'admin'}];
 
 export var allQuestionsData = [
   {

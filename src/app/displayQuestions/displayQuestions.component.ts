@@ -40,7 +40,7 @@ this.currQuest.options.sort((a,b)=>0.5-Math.random());
 
   finishQuest(){
     this.leaderBoardBool=true;
-console.log(this.totalMarks)
+// console.log(this.totalMarks)
       this.auth.currUser.marksScored = this.totalMarks;
   }
 
@@ -55,5 +55,21 @@ this.totalMarks += this.currQuest.marks;
 }
 this.currQuestIndex2+=1;
 
+  }
+
+  retryEventFun(){
+    this.leaderBoardBool=false;
+    this.allQuestions_Data=null;
+this.currQuest=null;
+this.currQuestIndex = 0;
+this.currQuestIndex2 = 0;
+this.maxCurrQuestIndex = null;
+this.totalMarks = 0;
+this.wrongBool = null;
+this.clickedBool = false;
+
+this.allQuestions_Data = this.auth._allQuestionsData.sort((a,b)=>0.5-Math.random());
+this.maxCurrQuestIndex = this.allQuestions_Data.length ;
+this.getCurrQuest();
   }
 }

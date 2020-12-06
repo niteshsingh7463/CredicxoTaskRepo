@@ -52,5 +52,5 @@
     </div>
 </div>
 <div class="container" *ngIf="leaderBoardBool">
-    <app-leaderboard></app-leaderboard>
+    <app-leaderboard (retryEvent)="retryEventFun()"></app-leaderboard>
 </div>

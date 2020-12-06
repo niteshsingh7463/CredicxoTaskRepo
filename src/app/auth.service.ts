@@ -12,10 +12,10 @@ export class AuthService {
   public loginStatusObs$ = this.loginStatusObs.asObservable();
 
   constructor(private router: Router) { }
-  // currUser = null;
-  currUser = {email:'user@user.com',password:'user1234',role:'user',name:'user',marksScored:12};//temporary for testing
-  // authData = allAuthData;
-  authData = [{email:'user1@user.com',password:'user1234',role:'user',name:'user',marksScored:8},{email:'user2@user.com',password:'user1234',role:'user',name:'user',marksScored:12},{email:'user3@user.com',password:'user1234',role:'user',name:'user',marksScored:null},{email:'user4@user.com',password:'user1234',role:'user',name:'user',marksScored:16},{email:'user@user.com',password:'user1234',role:'user',name:'user',marksScored:20}]//temporary for testing;
+  currUser = null;
+  // currUser = {email:'user@user.com',password:'user1234',role:'user',name:'user',marksScored:12};//temporary for testing
+  authData = allAuthData;
+  // authData = [{email:'user1@user.com',password:'user1234',role:'user',name:'user',marksScored:8},{email:'user2@user.com',password:'user1234',role:'user',name:'user',marksScored:12},{email:'user3@user.com',password:'user1234',role:'user',name:'user',marksScored:null},{email:'user4@user.com',password:'user1234',role:'user',name:'user',marksScored:16},{email:'user@user.com',password:'user1234',role:'user',name:'user',marksScored:20}]//temporary for testing;
   _allQuestionsData = allQuestionsData;
 
 
