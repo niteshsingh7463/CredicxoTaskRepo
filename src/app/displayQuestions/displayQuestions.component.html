@@ -1,0 +1,56 @@
+<div class="container m-5" *ngIf="!leaderBoardBool">
+    <div class="row">
+
+        <div class="col-6">
+            <div class="row">
+                <div class="col-12">
+
+                    <h4>Q.{{currQuestIndex+1}}: {{currQuest.text}}</h4><br>
+                </div>
+            </div>
+            <div class="row" *ngFor="let item of currQuest.options;index as k">
+                <div data-toggle="modal" data-target="#exampleModalCenter" [ngClass]="{'alert-success':clickedBool && (item==currQuest.ans),'alert-danger':clickedBool && (wrongBool==k),'alert col-12':true,'alert-info':!clickedBool}" (click)="optClicked(k)">
+                    <h5 style="cursor: pointer;"> {{k+1}}: {{item}}</h5>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenterTitle">{{wrongBool==null?'Correct Answer':'Wrong Answer'}}</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                    </div>
+                    <!-- <div class="modal-body">
+                        ...
+                    </div> -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="nextQuest()" *ngIf="currQuestIndex2<maxCurrQuestIndex">Next Question</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="finishQuest()" *ngIf="currQuestIndex2==maxCurrQuestIndex">Finish</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ===================================================================================== -->
+        <div class="col-2"></div>
+        <div class="col-4">
+            <div class="row">
+                <div class="col-12">
+                    <h6>Max Marks:</h6>
+                </div>
+                <div class="col-12">
+                    <h6>&nbsp;&nbsp;{{currQuest.marks}}</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" *ngIf="leaderBoardBool">
+    <app-leaderboard></app-leaderboard>
+</div>

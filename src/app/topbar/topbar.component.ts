@@ -8,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopbarComponent implements OnInit {
 
-  currentUserName: any = null;
   currentUser:any=null;
   currentUserRole:any=null;
   constructor(private authentication: AuthService) { }

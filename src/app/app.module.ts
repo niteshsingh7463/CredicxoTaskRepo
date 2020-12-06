@@ -1,3 +1,4 @@
+import { DisplayQuestionsComponent } from './displayQuestions/displayQuestions.component';
 import { TopbarComponent } from './topbar/topbar.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
@@ -8,14 +9,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { QuizComponent } from './quiz/quiz.component';
+import { LeaderboardComponent } from './leaderboard/leaderboard.component';
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    TopbarComponent
-
-  ],
+    TopbarComponent,
+      QuizComponent,
+      DisplayQuestionsComponent,
+      LeaderboardComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,

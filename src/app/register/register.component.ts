@@ -48,7 +48,8 @@ let data = {
   "name": name1,
 "email": email1,
 "password": password1,
-"role": role1
+"role": role1,
+"marksScored":null
 }
 let registrationMsg = this.auth.register(data);
 if(registrationMsg==1){

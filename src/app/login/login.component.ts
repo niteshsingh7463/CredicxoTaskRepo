@@ -34,7 +34,8 @@ export class LoginComponent implements OnInit {
 if(data){
   if(data.password==userPassword){
   this.wrongPass = -1;
-  this.authentication.login(data);}
+  this.authentication.login(data);
+}
 
   else{ this.wrongPass = 1
     this.authentication.logout();}

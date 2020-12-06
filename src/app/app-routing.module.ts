@@ -1,3 +1,5 @@
+import { UserAuthGuard } from './user-auth.guard';
+import { QuizComponent } from './quiz/quiz.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
@@ -10,6 +12,14 @@ const routes: Routes = [
   },{
     path:'sign-up',
     component:RegisterComponent
+  },{
+    path:'quiz',
+    component:QuizComponent,
+    canActivate:[UserAuthGuard]
+  },{
+    path:'',
+    redirectTo:'login',
+    pathMatch:'full'
   },
 ];
 
